@@ -14,7 +14,6 @@ public class DriverController {
     @Autowired
     private DriverService driverService;
 
-
     @RequestMapping("/driver")
     public @ResponseBody
     DriverResponse getDriver(@RequestParam Long id){

@@ -6,9 +6,7 @@ import br.com.nakatec.checka.repository.DriverRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class DriverService {
@@ -22,10 +20,6 @@ public class DriverService {
         response.setName(driver.getName());
         response.setCpf(driver.getCpf());
         return response;
-    }
-
-    public List<DriverResponse> toResponseList(List<Driver> driverList) {
-        return driverList.stream().map(this::converteToResponse).collect(Collectors.toList());
     }
 
     public DriverResponse getDriver(Long id) {
